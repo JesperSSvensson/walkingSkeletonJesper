@@ -36,6 +36,8 @@ namespace TheChuck.Pages
             {
                 var joke = await _jokeService.GetRandomJoke();
                 DisplayText = joke?.Value ?? "";
+                DisplayText = DisplayText.ToUpper();
+
             }
             catch(Exception ex)
             {
